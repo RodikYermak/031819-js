@@ -19,9 +19,17 @@ const THE_TIMER = document.querySelector('.timer');
 
 var timer = [0,0,0,0];
 
+// helper function to add leading zero
+function leadingZero(time) {
+    if(time<=9){
+        time = '0' + time;
+    }
+    return time;
+}
+
 // timer function
 function runTimer(){
-    let currentTime = timer[0] + ':' + timer[1] + ':' + timer[2];
+    let currentTime = leadingZero(timer[0]) + ':' + leadingZero(timer[1]) + ':' + leadingZero(timer[2]);
     
     THE_TIMER.innerHTML = currentTime;
     timer[3]++;
