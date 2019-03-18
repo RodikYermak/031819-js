@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 1 - js review</title>
+    
+    
+</head>
+<body>
+    <h1>Hello there</h1>
+    <a href="#" onClick='alert("You clicked")'>click me</a>
+    <h3>Hover on me</h3>
+    <button id="newWin" onClick='openNewWin()'>New window</button>
+    
+    
+    <script>
+        var subhead = document.querySelector('h3');
+//        subhead.addEventListener('mouseenter',function(){alert('you hovered');}, false);
+        
+        // new window function
+        function openNewWin() {
+            open('http://google.com', '_blank', 'width=200, height=200,menubar=no');
+        }
+        document.getElementById('newWin').addEventListener('click',openNewWin, false);
+//        openNewWin();
+        // basic function that uses a variable
+//        var myMsg = 'Hi there, today is Monday';
+//        var heading = document.getElementsByTagName('h1');
+//        function myFunc(){
+//            document.write(myMsg);
+//            document.body.innerHTML = '<p class="whatever">' + myMsg + '</p>';
+//        }
+//        myFunc();
+    </script>
+</body>
+</html>
